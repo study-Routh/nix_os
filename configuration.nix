@@ -14,21 +14,6 @@
 #timezone
   time.timeZone = "Asia/Kolkata";
 
-  # programs.firefox.enable = true;
-
-#packages
- environment.systemPackages = with pkgs; [
-	 vim 
-	 wget
-	 curl
-	 git
-	 ripgrep
-	 tree
-	 btop
-	foot
-	tree
- ];
-
 
  system.stateVersion = "26.05"; # Did you read the comment?
 
