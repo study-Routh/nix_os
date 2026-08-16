@@ -1,21 +1,6 @@
 require("modules.monitor")
 require("modules.general")
-hl.config({
-
-
-	decoration = {
-		rounding = 8,
-		shadow = {
-			enabled = false,
-		},
-		blur = {
-			enabled = false,
-		},
-	},
-
-
-})
-
+require("modules.decoration")
 local mainMod = "SUPER"
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("foot"))
