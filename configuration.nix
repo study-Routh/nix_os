@@ -6,18 +6,8 @@
       ./hardware-configuration.nix
       ./modules/networking.nix
       ./modules/boot.nix
+      ./modules/nix.nix
     ];
-
-
-#flakes feature on
-nix.settings.experimental-features = [ "nix-command" "flakes"];
-
-#Garbage collection
-#  nix.gc = {
-#	automatic = true;
-#	dates = "weekly";
-#	options = "--delete-older-than 14d";
-#  };
 
 #timezone
   time.timeZone = "Asia/Kolkata";
