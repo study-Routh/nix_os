@@ -29,10 +29,10 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
   time.timeZone = "Asia/Kolkata";
 
 #Hyprland
-#  programs.hyprland = {
-#	enable = true;
-#	withUWSM = false;
-# };
+  programs.hyprland = {
+	enable = true;
+	withUWSM = false;
+ };
 
 #users
  users.users.routh = {
@@ -55,6 +55,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 	 ripgrep
 	 tree
 	 btop
+	foot
  ];
 
 
