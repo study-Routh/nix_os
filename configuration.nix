@@ -7,6 +7,7 @@
       ./modules/networking.nix
       ./modules/boot.nix
       ./modules/nix.nix
+      ./modules/users.nix
     ];
 
 #timezone
@@ -16,16 +17,6 @@
   programs.hyprland = {
 	enable = true;
 	withUWSM = false;
- };
-
-#users
- users.users.routh = {
-   isNormalUser = true;
-   extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
- initialPassword = "nixos";
-   packages = with pkgs; [
-     tree
-   ];
  };
 
   # programs.firefox.enable = true;
@@ -40,6 +31,7 @@
 	 tree
 	 btop
 	foot
+	tree
  ];
 
 
