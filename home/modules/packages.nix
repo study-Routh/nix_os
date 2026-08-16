@@ -10,5 +10,7 @@
 		tree
 		btop
 		foot
+		bat 
+		less
 	];
 }
