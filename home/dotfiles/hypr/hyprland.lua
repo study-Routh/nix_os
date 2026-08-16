@@ -1,11 +1,4 @@
-hl.monitor ({
-	
-		output = "HDMI-A-1",
-		mode = "highrr",
-		position = "0x0",
-		scale = "1",
-	
-})
+require("modules.monitor")
 hl.config({
 
 
