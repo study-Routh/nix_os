@@ -5,12 +5,9 @@
     [ 
       ./hardware-configuration.nix
       ./modules/networking.nix
+      ./modules/boot.nix
     ];
 
-#BootLoader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 5;
 
 #flakes feature on
 nix.settings.experimental-features = [ "nix-command" "flakes"];
