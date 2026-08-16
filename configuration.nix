@@ -8,16 +8,11 @@
       ./modules/boot.nix
       ./modules/nix.nix
       ./modules/users.nix
+      ./modules/desktop/hyprland.nix
     ];
 
 #timezone
   time.timeZone = "Asia/Kolkata";
-
-#Hyprland
-  programs.hyprland = {
-	enable = true;
-	withUWSM = false;
- };
 
   # programs.firefox.enable = true;
 
