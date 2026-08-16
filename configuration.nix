@@ -4,6 +4,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./modules/networking.nix
     ];
 
 #BootLoader
@@ -20,10 +21,6 @@ nix.settings.experimental-features = [ "nix-command" "flakes"];
 #	dates = "weekly";
 #	options = "--delete-older-than 14d";
 #  };
-
-#Network
-  networking.hostName = "routh"; 
-  networking.networkmanager.enable = true;
 
 #timezone
   time.timeZone = "Asia/Kolkata";
