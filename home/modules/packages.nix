@@ -2,15 +2,18 @@
 
 {
 	home.packages = with pkgs; [
+		#core utilities
 		vim
 		wget
 		curl
-		ripgrep
 		tree
 		foot
-		bat 
 		less
 		wl-clipboard
+		
+		#search and rendering
+		ripgrep
+		bat
 
 		# Navigation and files
 	 	eza
