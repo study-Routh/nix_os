@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 
 --Application
 
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("foot"))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
 
 --window management 
 

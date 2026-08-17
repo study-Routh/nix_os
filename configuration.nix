@@ -9,6 +9,7 @@
       ./modules/nix.nix
       ./modules/users.nix
       ./modules/desktop/hyprland.nix
+      ./modules/shells.nix
     ];
 
 #timezone
