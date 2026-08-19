@@ -7,6 +7,7 @@
 		./modules/zsh.nix
 		./modules/kitty.nix
 		./modules/starship.nix
+		./modules/polkit.nix
 	];
 
 	home.stateVersion = "26.05";

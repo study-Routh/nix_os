@@ -2,3 +2,8 @@ require("modules.monitor")
 require("modules.general")
 require("modules.decoration")
 require("modules.binds")
+require("modules.input")
+require("modules.rules")
+require("modules.animations")
+require("modules.session")
+
