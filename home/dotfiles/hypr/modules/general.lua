@@ -1,8 +1,16 @@
+local theme = require("theme")
+
 hl.config({
-	general = {
-		gaps_in = 5,
-		gaps_out = 10,
-		border_size = 2,
-		layout = "dwindle",
-	},
+  general = {
+    gaps_in = theme.geometry.gapsIn,
+    gaps_out = theme.geometry.gapsOut,
+    border_size = theme.geometry.borderSize,
+
+    col = {
+      active_border = "rgba(" .. theme.colors.accent .. "ff)",
+      inactive_border = "rgba(" .. theme.colors.border .. "cc)",
+    },
+
+    layout = "dwindle",
+  },
 })

@@ -78,6 +78,8 @@
 		#browser 
 		brave	
 		
+		#Fonts
+		nerd-fonts.jetbrains-mono
 
 	];
 }

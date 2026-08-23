@@ -1,12 +1,11 @@
-{ pkgs, ... }:
+{ theme, ... }:
 
 {
 	programs.kitty = {
 		enable = true;
 
 		font = {
-			package = pkgs.jetbrains-mono;
-			name = "JetBrains Mono";
+			name = theme.typography.mono;
 			size = 15;
 		};
 

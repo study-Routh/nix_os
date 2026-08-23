@@ -2,7 +2,7 @@ local mainMod = "SUPER"
 
 --Application
 
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("foot"))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("fuzzel"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("foot -e yazi"))
 
