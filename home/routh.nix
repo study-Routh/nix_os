@@ -14,6 +14,9 @@
 		./modules/gtk.nix
 		./modules/icons.nix
 		./modules/foot.nix
+		./modules/zathura.nix
+		./modules/yazi.nix
+		./modules/btop.nix
 		./modules/zsh.nix
 		./modules/kitty.nix
 		./modules/starship.nix

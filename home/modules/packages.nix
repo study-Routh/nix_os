@@ -25,7 +25,6 @@
 		fd
 		fzf
 		zoxide
-		yazi
 
 		#system awareness
 		btop
