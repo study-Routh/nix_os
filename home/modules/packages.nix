@@ -77,6 +77,7 @@
 
 		#browser 
 		brave	
+		
 
 	];
 }

@@ -6,5 +6,6 @@ imports = [
 		./idle.nix
 		./clipboard.nix
 		./storage.nix
+		./sddm.nix
 	];
 }
