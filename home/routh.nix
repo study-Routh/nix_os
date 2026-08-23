@@ -18,6 +18,8 @@
 		./modules/yazi.nix
 		./modules/btop.nix
 		./modules/lazygit.nix
+		./modules/imv.nix
+		./modules/mpv.nix
 		./modules/zsh.nix
 		./modules/kitty.nix
 		./modules/starship.nix

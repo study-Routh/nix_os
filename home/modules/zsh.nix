@@ -5,5 +5,10 @@
 		enable = true;
 		enableCompletion = true;
 		syntaxHighlighting.enable = true;
+		
+		initContent = '' 
+		PROMPT='%~ > '
+		'';
+		
 	};
 }
