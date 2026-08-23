@@ -13,6 +13,7 @@
 		./modules/cursor.nix
 		./modules/gtk.nix
 		./modules/icons.nix
+		./modules/foot.nix
 		./modules/zsh.nix
 		./modules/kitty.nix
 		./modules/starship.nix
