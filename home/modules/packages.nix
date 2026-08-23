@@ -75,7 +75,8 @@
 		unzip
 		p7zip
 
-		
+		#browser 
+		brave	
 
 	];
 }
