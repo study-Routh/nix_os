@@ -8,7 +8,7 @@
       ./modules/boot.nix
       ./modules/nix.nix
       ./modules/users.nix
-      ./modules/desktop/hyprland.nix
+      ./modules/desktop/default.nix
       ./modules/shells.nix
       ./modules/security.nix
     ];

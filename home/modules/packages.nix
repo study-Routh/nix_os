@@ -9,7 +9,12 @@
 		tree
 		foot
 		less
+
+		#screen-shot and clipboard
+		slurp   	#choose screen region 
+		grim 		#capture it
 		wl-clipboard
+		cliphist
 		
 		#search and rendering
 		ripgrep
@@ -41,5 +46,36 @@
 		#refrence
 		tldr
 		
+		#Desktop environment comp.
+		fuzzel
+		
+		#volume
+		playerctl
+
+		
+		#file explorer
+		yazi
+
+		#screen-rec
+		obs-studio
+
+		#pciutils
+		pciutils
+		usbutils
+
+		#Media 
+		mpv
+		imv
+		
+		#Documents 
+		zathura
+
+		#Archives
+		zip
+		unzip
+		p7zip
+
+		
+
 	];
 }
