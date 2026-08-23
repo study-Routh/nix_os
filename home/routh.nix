@@ -17,6 +17,7 @@
 		./modules/zathura.nix
 		./modules/yazi.nix
 		./modules/btop.nix
+		./modules/lazygit.nix
 		./modules/zsh.nix
 		./modules/kitty.nix
 		./modules/starship.nix
