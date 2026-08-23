@@ -80,6 +80,9 @@
 		
 		#Fonts
 		nerd-fonts.jetbrains-mono
+	
+		#wallpaper
+		hyprpaper
 
 	];
 }

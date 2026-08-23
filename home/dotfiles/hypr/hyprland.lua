@@ -6,4 +6,4 @@ require("modules.input")
 require("modules.rules")
 require("modules.animations")
 require("modules.session")
-
+require("modules.misc")

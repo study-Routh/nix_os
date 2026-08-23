@@ -5,5 +5,7 @@
 		hypridle
 		hyprlock
 	];
+	
+	security.pam.services.hyprlock = {};
 
 }

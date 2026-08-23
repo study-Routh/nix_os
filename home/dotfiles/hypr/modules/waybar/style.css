@@ -1,0 +1,76 @@
+@import "theme.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: alpha(@background, 0.72);
+  color: @foreground;
+
+  border-bottom: 1px solid alpha(@border, 0.65);
+}
+
+/* Clock */
+
+#clock {
+  margin-left: 12px;
+  padding: 0 8px;
+
+  color: @foreground;
+  font-weight: 600;
+}
+
+/* Workspaces */
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 4px 2px;
+
+  color: @muted;
+  background: transparent;
+
+  border-radius: 6px;
+
+  transition: all 120ms ease;
+}
+
+#workspaces button:hover {
+  color: @foreground;
+  background: alpha(@surface, 0.75);
+}
+
+#workspaces button.active {
+  color: @foreground;
+  background: alpha(@surface_alt, 0.82);
+}
+
+#workspaces button.urgent {
+  color: @error;
+}
+
+/* Volume */
+
+#pulseaudio {
+  padding: 0 10px;
+  margin: 4px 0;
+
+  color: @foreground;
+  background: transparent;
+}
+
+#pulseaudio.muted {
+  color: @muted;
+}
+
+/* Tray */
+
+#tray {
+  padding: 0 8px;
+  margin: 4px 8px 4px 0;
+
+  background: transparent;
+}

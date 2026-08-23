@@ -1,5 +1,6 @@
 hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprland-session.target")
+	hl.exec_cmd("hyprctl setcursor breeze_cursors 24")
 end)
 
 hl.on("hyprland.shutdown", function()
