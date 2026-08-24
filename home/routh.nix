@@ -24,7 +24,7 @@
 		./modules/kitty.nix
 		./modules/starship.nix
 		./modules/polkit.nix
-		
+		./modules/neovim.nix	
 	];
 
 	fonts.fontconfig.enable = true;

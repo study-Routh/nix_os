@@ -1,87 +1,114 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-	home.packages = with pkgs; [
-		#core utilities
-		vim
-		wget
-		curl
-		tree
-		foot
-		less
+  home.packages = with pkgs; [
+    # Core utilities
+    vim
+    neovim
+    wget
+    curl
+    tree
+    foot
+    less
 
-		#screen-shot and clipboard
-		slurp   	#choose screen region 
-		grim 		#capture it
-		wl-clipboard
-		cliphist
-		
-		#search and rendering
-		ripgrep
-		bat
+    # Neovim / development
+    (lib.hiPrio gcc)
+    clang
+    clang-tools
+    gnumake
+    cmake
+    tree-sitter
 
-		# Navigation and files
-	 	eza
-		fd
-		fzf
-		zoxide
+    # Language servers
+    lua-language-server
+    pyright
+    clang-tools
+    rust-analyzer
+    cmake-language-server
+    jdt-language-server
 
-		#system awareness
-		btop
-		gdu		
+    # Language toolchains
+    python3
+    rustc
+    cargo
+    openjdk25
 
-		# git workflow 
-		git 
-		gh
-		lazygit
-		delta
-		
-		# prompt / Environment
-		starship
+    #code formatters
+    stylua
+    ruff
+    rustfmt
+    google-java-format 
 
-		# JSON/Data 
-		jq
-		
-		#refrence
-		tldr
-		
-		#Desktop environment comp.
-		fuzzel
-		
-		#volume
-		playerctl
+    # Screen-shot and clipboard
+    slurp
+    grim
+    wl-clipboard
+    cliphist
 
-		
-		#file explorer
-		yazi
+    # Search and rendering
+    ripgrep
+    bat
 
-		#screen-rec
-		obs-studio
+    # Navigation and files
+    eza
+    fd
+    fzf
+    zoxide
 
-		#pciutils
-		pciutils
-		usbutils
+    # System awareness
+    btop
+    gdu
 
-		#Media 
-		mpv
-		imv
-		
-		#Documents 
-		zathura
+    # Git workflow
+    git
+    gh
+    lazygit
+    delta
 
-		#Archives
-		zip
-		unzip
-		p7zip
+    # Prompt / Environment
+    starship
 
-		#browser 
-		brave	
-		
-		#Fonts
-		nerd-fonts.jetbrains-mono
-	
-		#wallpaper
-		hyprpaper
+    # JSON/Data
+    jq
 
-	];
+    # Reference
+    tldr
+
+    # Desktop environment comp.
+    fuzzel
+
+    # Volume
+    playerctl
+
+    # File explorer
+    yazi
+
+    # Screen-rec
+    obs-studio
+
+    # Hardware utilities
+    pciutils
+    usbutils
+
+    # Media
+    mpv
+    imv
+
+    # Documents
+    zathura
+
+    # Archives
+    zip
+    unzip
+    p7zip
+
+    # Browser
+    brave
+
+    # Fonts
+    nerd-fonts.jetbrains-mono
+
+    # Wallpaper
+    hyprpaper
+  ];
 }
