@@ -1,137 +1,85 @@
-local theme = require("desktop_theme")
-local c = theme.colors
-
-local graphite = {
-    normal = {
-        a = { fg = c.background, bg = c.accent, gui = "bold" },
-        b = { fg = c.foreground, bg = c.surfaceAlt },
-        c = { fg = c.foreground, bg = c.background },
-    },
-
-    insert = {
-        a = { fg = c.background, bg = c.success, gui = "bold" },
-    },
-
-    visual = {
-        a = { fg = c.background, bg = c.warning, gui = "bold" },
-    },
-
-    replace = {
-        a = { fg = c.background, bg = c.error, gui = "bold" },
-    },
-
-    command = {
-        a = { fg = c.background, bg = c.accent, gui = "bold" },
-    },
-
-    inactive = {
-        a = { fg = c.muted, bg = c.background },
-        b = { fg = c.muted, bg = c.background },
-        c = { fg = c.muted, bg = c.background },
-    },
-}
-
 return {
-    "nvim-lualine/lualine.nvim",
+	"nvim-lualine/lualine.nvim",
 
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
-    },
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
 
-    config = function()
-        require("lualine").setup({
-            options = {
-                theme = graphite,
-                icons_enabled = true,
-                globalstatus = true,
+	config = function()
+		local function git_status()
+			local status = vim.b.gitsigns_status_dict
 
-                component_separators = "",
-                section_separators = "",
+			-- Not inside a git repository
+			if not status or not status.head then
+				return ""
+			end
 
-                disabled_filetypes = {
-                    statusline = {
-                        "dashboard",
-                    },
-                },
-            },
+			local added = status.added or 0
+			local removed = status.removed or 0
+			local changed = status.changed or 0
 
-            sections = {
-                lualine_a = {
-                    {
-                        function()
-                            return ""
-                        end,
-                        padding = {
-                            left = 1,
-                            right = 1,
-                        },
-                    },
+			-- Clean / already committed
+			if added == 0 and removed == 0 and changed == 0 then
+				return "."
+			end
 
-                    {
-                        "mode",
-                    },
-                },
+			local parts = {}
 
-                lualine_b = {
-                    "branch",
+			if added > 0 then
+				table.insert(parts, "+" .. added)
+			end
 
-                    {
-                        "diff",
-                        symbols = {
-                            added = "+",
-                            modified = "~",
-                            removed = "-",
-                        },
-                    },
+			if removed > 0 then
+				table.insert(parts, "-" .. removed)
+			end
 
-                    "diagnostics",
-                },
+			return table.concat(parts, " ")
+		end
 
-                lualine_c = {
-                    {
-                        "filename",
-                        path = 1,
+		require("lualine").setup({
+			options = {
+				theme = "kanagawa",
+				icons_enabled = true,
+				globalstatus = true,
+			},
 
-                        symbols = {
-                            modified = " ●",
-                            readonly = " ",
-                            unnamed = "[No Name]",
-                            newfile = " [New]",
-                        },
-                    },
-                },
+			sections = {
+				lualine_a = {
+					"mode",
+				},
 
-                lualine_x = {
-                    {
-                        "filetype",
-                        colored = false,
-                    },
-                },
+				lualine_b = {
+					git_status,
+				},
 
-                lualine_y = {
-                    "progress",
-                },
+				lualine_c = {
+					{
+						"filename",
+						path = 0,
 
-                lualine_z = {
-                    "location",
-                },
-            },
+						symbols = {
+							modified = " ●",
+							readonly = " ",
+							unnamed = "[No Name]",
+							newfile = "[New]",
+						},
+					},
+				},
 
-            inactive_sections = {
-                lualine_a = {},
-                lualine_b = {},
+				lualine_x = {
+					"encoding",
+					"fileformat",
+					"filetype",
+				},
 
-                lualine_c = {
-                    {
-                        "filename",
-                        path = 1,
-                    },
-                },
+				lualine_y = {
+					"progress",
+				},
 
-                lualine_x = {},
-                lualine_y = {},
-                lualine_z = {},
-            },
-        })
-    end,
+				lualine_z = {
+					"location",
+				},
+			},
+		})
+	end,
 }

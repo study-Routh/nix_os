@@ -11,6 +11,7 @@
       ./modules/desktop/default.nix
       ./modules/shells.nix
       ./modules/security.nix
+      ./modules/gtk.nix
     ];
 
 #timezone

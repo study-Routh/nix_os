@@ -1,45 +1,55 @@
 return {
-    "folke/which-key.nvim",
+	"folke/which-key.nvim",
 
-    event = "VeryLazy",
+	event = "VeryLazy",
 
-    opts = {
-        preset = "modern",
+	opts = {
+		preset = "modern",
 
-        delay = 300,
+		delay = 300,
 
-        win = {
-            border = "single",
-            no_overlap = true,
-            padding = { 1, 2 },
-            title = false,
-        },
+		win = {
+			border = "single",
+			no_overlap = false,
 
-        layout = {
-            width = {
-                min = 20,
-                max = 50,
-            },
+			-- Right side
+			col = math.huge,
+			row = 1,
 
-            spacing = 3,
-        },
+			width = 38,
+			height = {
+				min = 10,
+				max = 30,
+			},
 
-        icons = {
-            breadcrumb = "»",
-            separator = "→",
-            group = "+",
-        },
-    },
+			padding = { 1, 2 },
+			title = " Keymaps ",
+			title_pos = "center",
+		},
 
-    keys = {
-        {
-            "<leader>?",
-            function()
-                require("which-key").show({
-                    global = false,
-                })
-            end,
-            desc = "Buffer local keymaps",
-        },
-    },
+		-- Keep entries mostly vertical
+		layout = {
+			width = {
+				min = 30,
+				max = 34,
+			},
+			spacing = 1,
+		},
+
+		icons = {
+			breadcrumb = "»",
+			separator = "→",
+			group = "+",
+		},
+	},
+
+	keys = {
+		{
+			"<leader>`",
+			function()
+				require("which-key").show()
+			end,
+			desc = "Show keymaps",
+		},
+	},
 }

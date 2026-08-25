@@ -58,6 +58,7 @@
     # System awareness
     btop
     gdu
+    fastfetch
 
     # Git workflow
     git
@@ -110,5 +111,10 @@
 
     # Wallpaper
     hyprpaper
-  ];
+
+    # Desktop / GTK utilities
+    glib
+    dconf
+    gsettings-desktop-schemas
+    ];
 }
