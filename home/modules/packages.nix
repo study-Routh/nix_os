@@ -84,8 +84,6 @@
 # Volume
             playerctl
 
-# File explorer
-            yazi
 
 # Screen-rec
             obs-studio
@@ -120,5 +118,7 @@
 #emoji
             rofimoji
 
+#talk
+discord
             ];
 }

@@ -19,8 +19,12 @@
 				./configuration.nix
 				
 				home-manager.nixosModules.home-manager
-					{ 
-						home-manager.users.routh = import ./home/routh.nix;
+					{
+                        home-manager.useGlobalPkgs = true;
+
+                        home-manager.useUserPackages = true;
+
+                        home-manager.users.routh = import ./home/routh.nix;
 					}
 			
 			];

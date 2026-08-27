@@ -1,6 +1,27 @@
-{ theme, ... }:
+{ pkgs, theme, ... }:
 
 {
+
+programs.yazi = {
+    enable = true;
+    package = pkgs.yazi;
+  };
+
+xdg.desktopEntries.yazi = {
+    name = "Yazi";
+    genericName = "File Manager";
+    comment = "Terminal file manager";
+    exec = "foot -e yazi %f";
+    terminal = false;
+    type = "Application";
+    categories = [ "System" "FileManager" ];
+    mimeType = [ "inode/directory" ];
+  };
+
+xdg.mimeApps.defaultApplications = {
+  "inode/directory" = "yazi.desktop";
+};
+
   xdg.configFile."yazi/theme.toml".text = ''
        [mgr]
     cwd = { fg = "#${theme.colors.accent}", bold = true }
