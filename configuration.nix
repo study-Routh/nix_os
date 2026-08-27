@@ -12,6 +12,7 @@
       ./modules/shells.nix
       ./modules/security.nix
       ./modules/gtk.nix
+      ./modules/fonts.nix
     ];
 
 #timezone

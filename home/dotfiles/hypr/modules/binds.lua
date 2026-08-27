@@ -5,6 +5,7 @@ local mainMod = "SUPER"
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("fuzzel"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("foot -e yazi"))
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofimoji --selector fuzzel --action copy"))
 
 --window management
 

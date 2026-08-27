@@ -1,120 +1,124 @@
 { pkgs, lib, ... }:
 
 {
-  home.packages = with pkgs; [
-    # Core utilities
-    vim
-    neovim
-    wget
-    curl
-    tree
-    foot
-    less
+    home.packages = with pkgs; [
+# Core utilities
+        vim
+            neovim
+            wget
+            curl
+            tree
+            foot
+            less
 
-    # Neovim / development
-    (lib.hiPrio gcc)
-    clang
-    clang-tools
-    gnumake
-    cmake
-    tree-sitter
+# Neovim / development
+            (lib.hiPrio gcc)
+            clang
+            clang-tools
+            gnumake
+            cmake
+            tree-sitter
 
-    # Language servers
-    lua-language-server
-    pyright
-    clang-tools
-    rust-analyzer
-    cmake-language-server
-    jdt-language-server
+#IDE
+            vscodium
 
-    # Language toolchains
-    python3
-    rustc
-    cargo
-    openjdk25
+# Language servers
+            lua-language-server
+            pyright
+            clang-tools
+            rust-analyzer
+            cmake-language-server
+            jdt-language-server
 
-    #code formatters
-    stylua
-    ruff
-    rustfmt
-    google-java-format 
+# Language toolchains
+            python3
+            rustc
+            cargo
+            openjdk25
 
-    # Screen-shot and clipboard
-    slurp
-    grim
-    wl-clipboard
-    cliphist
+#code formatters
+            stylua
+            ruff
+            rustfmt
+            google-java-format 
 
-    # Search and rendering
-    ripgrep
-    bat
+# Screen-shot and clipboard
+            slurp
+            grim
+            wl-clipboard
+            cliphist
 
-    # Navigation and files
-    eza
-    fd
-    fzf
-    zoxide
+# Search and rendering
+            ripgrep
+            bat
 
-    # System awareness
-    btop
-    gdu
-    fastfetch
+# Navigation and files
+            eza
+            fd
+            fzf
+            zoxide
 
-    # Git workflow
-    git
-    gh
-    lazygit
-    delta
+# System awareness
+            btop
+            gdu
+            fastfetch
 
-    # Prompt / Environment
-    starship
+# Git workflow
+            git
+            gh
+            lazygit
+            delta
 
-    # JSON/Data
-    jq
+# Prompt / Environment
+            starship
 
-    # Reference
-    tldr
+# JSON/Data
+            jq
 
-    # Desktop environment comp.
-    fuzzel
+# Reference
+            tldr
 
-    # Volume
-    playerctl
+# Desktop environment comp.
+            fuzzel
 
-    # File explorer
-    yazi
+# Volume
+            playerctl
 
-    # Screen-rec
-    obs-studio
+# File explorer
+            yazi
 
-    # Hardware utilities
-    pciutils
-    usbutils
+# Screen-rec
+            obs-studio
 
-    # Media
-    mpv
-    imv
+# Hardware utilities
+            pciutils
+            usbutils
 
-    # Documents
-    zathura
+# Media
+            mpv
+            imv
 
-    # Archives
-    zip
-    unzip
-    p7zip
+# Archives
+            zip
+            unzip
+            p7zip
 
-    # Browser
-    brave
+# Browser
+            brave
 
-    # Fonts
-    nerd-fonts.jetbrains-mono
+# Wallpaper
+            hyprpaper
 
-    # Wallpaper
-    hyprpaper
+# Desktop / GTK utilities
+            glib
+            dconf
+            gsettings-desktop-schemas
 
-    # Desktop / GTK utilities
-    glib
-    dconf
-    gsettings-desktop-schemas
-    ];
+#readest
+            readest
+
+#emoji
+            rofimoji
+
+            ];
 }
