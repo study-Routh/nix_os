@@ -119,6 +119,20 @@
             rofimoji
 
 #talk
-discord
+            discord
+
+#alsa-utils
+            alsa-utils
+
+# Volume
+            playerctl
+            pwvucontrol
+            pulseaudio
+
+#file share
+            localsend
+
+#notestaking
+            xournalpp
             ];
 }

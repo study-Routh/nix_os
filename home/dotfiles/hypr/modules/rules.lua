@@ -1,12 +1,27 @@
--- window-specific behavior rules go here 
+-- window-specific behavior rules go here
 
 hl.window_rule({
-    name = "float-modal-dialogs",
+	name = "float-modal-dialogs",
 
-    match = {
-        modal = true,
-    },
+	match = {
+		modal = true,
+	},
 
-    float = true,
-    center = true,
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	name = "pwvucontrol",
+
+	match = {
+		class = "com.saivert.pwvucontrol",
+	},
+
+	float = true,
+	center = true,
+	size = {
+		650,
+		500,
+	},
 })

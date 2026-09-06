@@ -6,7 +6,8 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("fuzzel"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("foot -e yazi"))
 hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofimoji --selector fuzzel --action copy"))
-
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("pwvucontrol"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("pkill -SIGUSR1 waybar"))
 --window management
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
