@@ -102,20 +102,14 @@ return {
 		-- Web
 		--------------------------------------------------
 
-		vim.lsp.config("html", {
-			capabilities = capabilities,
-		})
-
-		vim.lsp.config("cssls", {
-			capabilities = capabilities,
-		})
-
 		vim.lsp.config("vtsls", {
 			capabilities = capabilities,
 		})
+
 		vim.lsp.config("eslint", {
 			capabilities = capabilities,
 		})
+
 		--------------------------------------------------
 		-- Enable servers
 		--------------------------------------------------
@@ -127,8 +121,6 @@ return {
 			"rust_analyzer",
 			"cmake",
 			"jdtls",
-			"html",
-			"cssls",
 			"vtsls",
 			"eslint",
 		})

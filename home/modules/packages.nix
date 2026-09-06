@@ -29,7 +29,6 @@
             rust-analyzer
             cmake-language-server
             jdt-language-server
-            vscode-langservers-extracted
             vtsls
 
 # Language toolchains
