@@ -1,52 +1,75 @@
 return {
-    "stevearc/conform.nvim",
+	"stevearc/conform.nvim",
 
-    config = function()
-        local conform = require("conform")
+	config = function()
+		local conform = require("conform")
 
-        conform.setup({
-            --------------------------------------------------
-            -- Formatters
-            --------------------------------------------------
+		conform.setup({
+			--------------------------------------------------
+			-- Formatters
+			--------------------------------------------------
 
-            formatters_by_ft = {
-                lua = {
-                    "stylua",
-                },
+			formatters_by_ft = {
+				lua = {
+					"stylua",
+				},
 
-                python = {
-                    "ruff_format",
-                },
+				python = {
+					"ruff_format",
+				},
 
-                rust = {
-                    "rustfmt",
-                },
+				rust = {
+					"rustfmt",
+				},
 
-                c = {
-                    "clang_format",
-                },
+				c = {
+					"clang_format",
+				},
 
-                cpp = {
-                    "clang_format",
-                },
+				cpp = {
+					"clang_format",
+				},
 
-                java = {
-                    "google_java_format",
-                },
+				java = {
+					"google_java_format",
+				},
 
-                cmake = {
-                    "cmake_format",
-                },
-            },
+				cmake = {
+					"cmake_format",
+				},
+				html = {
+					"prettier",
+				},
 
-            --------------------------------------------------
-            -- Format on save
-            --------------------------------------------------
+				css = {
+					"prettier",
+				},
 
-            format_on_save = {
-                timeout_ms = 1000,
-                lsp_format = "fallback",
-            },
-        })
-    end,
+				javascript = {
+					"prettier",
+				},
+
+				typescript = {
+					"prettier",
+				},
+
+				javascriptreact = {
+					"prettier",
+				},
+
+				typescriptreact = {
+					"prettier",
+				},
+			},
+
+			--------------------------------------------------
+			-- Format on save
+			--------------------------------------------------
+
+			format_on_save = {
+				timeout_ms = 1000,
+				lsp_format = "fallback",
+			},
+		})
+	end,
 }

@@ -1,114 +1,136 @@
 return {
-    "neovim/nvim-lspconfig",
+	"neovim/nvim-lspconfig",
 
-    config = function()
-        --------------------------------------------------
-        -- Diagnostics
-        --------------------------------------------------
+	config = function()
+		--------------------------------------------------
+		-- Diagnostics
+		--------------------------------------------------
 
-        vim.diagnostic.config({
-            virtual_text = false,
-            signs = true,
-            underline = true,
-            update_in_insert = false,
-            severity_sort = true,
-        })
+		vim.diagnostic.config({
+			virtual_text = false,
+			signs = true,
+			underline = true,
+			update_in_insert = false,
+			severity_sort = true,
+		})
 
-        vim.keymap.set("n", "<leader>dt", function()
-            local config = vim.diagnostic.config()
+		vim.keymap.set("n", "<leader>dt", function()
+			local config = vim.diagnostic.config()
 
-            vim.diagnostic.config({
-                virtual_text = not config.virtual_text,
-            })
-        end, {
-            desc = "Toggle Diagnostic Text",
-        })
+			vim.diagnostic.config({
+				virtual_text = not config.virtual_text,
+			})
+		end, {
+			desc = "Toggle Diagnostic Text",
+		})
 
-        --------------------------------------------------
-        -- Blink capabilities
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Blink capabilities
+		--------------------------------------------------
 
-        local capabilities = require("blink.cmp").get_lsp_capabilities()
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
-        --------------------------------------------------
-        -- Lua
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Lua
+		--------------------------------------------------
 
-        vim.lsp.config("lua_ls", {
-            capabilities = capabilities,
+		vim.lsp.config("lua_ls", {
+			capabilities = capabilities,
 
-            settings = {
-                Lua = {
-                    runtime = {
-                        version = "LuaJIT",
-                    },
+			settings = {
+				Lua = {
+					runtime = {
+						version = "LuaJIT",
+					},
 
-                    workspace = {
-                        library = {
-                            vim.env.VIMRUNTIME,
-                        },
+					workspace = {
+						library = {
+							vim.env.VIMRUNTIME,
+						},
 
-                        checkThirdParty = false,
-                    },
+						checkThirdParty = false,
+					},
 
-                    telemetry = {
-                        enable = false,
-                    },
-                },
-            },
-        })
+					telemetry = {
+						enable = false,
+					},
+				},
+			},
+		})
 
-        --------------------------------------------------
-        -- Python
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Python
+		--------------------------------------------------
 
-        vim.lsp.config("pyright", {
-            capabilities = capabilities,
-        })
+		vim.lsp.config("pyright", {
+			capabilities = capabilities,
+		})
 
-        --------------------------------------------------
-        -- C / C++
-        --------------------------------------------------
+		--------------------------------------------------
+		-- C / C++
+		--------------------------------------------------
 
-        vim.lsp.config("clangd", {
-            capabilities = capabilities,
-        })
+		vim.lsp.config("clangd", {
+			capabilities = capabilities,
+		})
 
-        --------------------------------------------------
-        -- Rust
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Rust
+		--------------------------------------------------
 
-        vim.lsp.config("rust_analyzer", {
-            capabilities = capabilities,
-        })
+		vim.lsp.config("rust_analyzer", {
+			capabilities = capabilities,
+		})
 
-        --------------------------------------------------
-        -- CMake
-        --------------------------------------------------
+		--------------------------------------------------
+		-- CMake
+		--------------------------------------------------
 
-        vim.lsp.config("cmake", {
-            capabilities = capabilities,
-        })
+		vim.lsp.config("cmake", {
+			capabilities = capabilities,
+		})
 
-        --------------------------------------------------
-        -- Java
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Java
+		--------------------------------------------------
 
-        vim.lsp.config("jdtls", {
-            capabilities = capabilities,
-        })
+		vim.lsp.config("jdtls", {
+			capabilities = capabilities,
+		})
 
-        --------------------------------------------------
-        -- Enable servers
-        --------------------------------------------------
+		--------------------------------------------------
+		-- Web
+		--------------------------------------------------
 
-        vim.lsp.enable({
-            "lua_ls",
-            "pyright",
-            "clangd",
-            "rust_analyzer",
-            "cmake",
-            "jdtls",
-        })
-    end,
+		vim.lsp.config("html", {
+			capabilities = capabilities,
+		})
+
+		vim.lsp.config("cssls", {
+			capabilities = capabilities,
+		})
+
+		vim.lsp.config("vtsls", {
+			capabilities = capabilities,
+		})
+		vim.lsp.config("eslint", {
+			capabilities = capabilities,
+		})
+		--------------------------------------------------
+		-- Enable servers
+		--------------------------------------------------
+
+		vim.lsp.enable({
+			"lua_ls",
+			"pyright",
+			"clangd",
+			"rust_analyzer",
+			"cmake",
+			"jdtls",
+			"html",
+			"cssls",
+			"vtsls",
+			"eslint",
+		})
+	end,
 }

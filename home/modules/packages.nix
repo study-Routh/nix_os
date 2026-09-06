@@ -29,18 +29,22 @@
             rust-analyzer
             cmake-language-server
             jdt-language-server
+            vscode-langservers-extracted
+            vtsls
 
 # Language toolchains
             python3
             rustc
             cargo
             openjdk25
+            nodejs
 
 #code formatters
             stylua
             ruff
             rustfmt
             google-java-format 
+            prettier
 
 # Screen-shot and clipboard
             slurp
