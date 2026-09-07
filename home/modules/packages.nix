@@ -10,6 +10,7 @@
             tree
             foot
             less
+	    os-prober
 
 # Neovim / development
             (lib.hiPrio gcc)
