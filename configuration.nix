@@ -16,9 +16,9 @@
       ./modules/hardware_tweaks/opentabletdriver.nix
       ./modules/hardware_tweaks/nvidia.nix
       ./modules/hardware_tweaks/touchpad.nix
-      ./modules/hardware_tweaks/bluethooth.nix
       ./modules/hardware_tweaks/audio.nix
       ./modules/hardware_tweaks/power.nix
+      ./modules/hardware_tweaks/bluetooth.nix
 
     ];
 

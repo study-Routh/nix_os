@@ -7,8 +7,13 @@
 		syntaxHighlighting.enable = true;
 		
 		initContent = '' 
-		PROMPT='%~ > '
-		'';
+        precmd(){
+        print ""
+        }
+
+		PROMPT='%~ >
+❯ '       
+        '';
 		
 	};
 }

@@ -30,6 +30,11 @@ let
   '';
 in
 {
+    
+    home.shellAliases = {
+    vi = "nvim";
+    };
+
   xdg.configFile."nvim" = {
     source = nvimConfig;
     recursive = true;

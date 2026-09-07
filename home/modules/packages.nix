@@ -10,7 +10,7 @@
             tree
             foot
             less
-	    os-prober
+     	    os-prober
 
 # Neovim / development
             (lib.hiPrio gcc)
@@ -38,6 +38,7 @@
             cargo
             openjdk25
             nodejs
+            uv
 
 #code formatters
             stylua
