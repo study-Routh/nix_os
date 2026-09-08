@@ -6,6 +6,11 @@
   services.displayManager.sddm = {
     enable = true;
     theme = "pixel-cyberpunk";
+
+    extraPackages = [
+      pkgs.kdePackages.qtmultimedia
+      pkgs.qt6Packages.qt5compat
+    ];
   };
 
   services.displayManager.defaultSession = "hyprland";
