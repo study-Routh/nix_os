@@ -1,15 +1,15 @@
 { ... }:
 {
-nixpkgs.config.allowUnfree = true;
-	nix.settings.experimental-features = [
-		"nix-command"
-		"flakes"
-	];
+    nixpkgs.config.allowUnfree = true;
+    nix.settings.experimental-features = [
+        "nix-command"
+            "flakes"
+    ];
 
-	#Garbage 
-	# nix.gc = {
-	#	automatic = true;
-	#	dates = "weekly";
-	#	options = "--delete-older-than 14d";
-	#};
+#Garbage 
+    nix.gc = {
+        automatic = true;
+        dates = "weekly";
+        options = "--delete-older-than 14d";
+    };
 }

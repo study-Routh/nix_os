@@ -5,3 +5,8 @@ hl.config({
 		repeat_delay = 300,
 	},
 })
+
+hl.device({
+	name = "opentabletdriver-virtual-artist-tablet",
+	output = "HDMI-A-1",
+})
