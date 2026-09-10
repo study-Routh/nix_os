@@ -139,5 +139,6 @@
 
 #notestaking
             xournalpp
+
             ];
 }
