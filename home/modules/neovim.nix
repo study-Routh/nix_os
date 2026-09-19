@@ -31,12 +31,6 @@ let
 in
 {
 
-
-    home.sessionVariables = {
-        EDITOR = "nvim";
-        VISUAL = "nvim";
-    };
-
   xdg.configFile."nvim" = {
     source = nvimConfig;
     recursive = true;

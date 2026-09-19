@@ -27,7 +27,6 @@
 # Language servers
             lua-language-server
             pyright
-            clang-tools
             rust-analyzer
             cmake-language-server
             jdt-language-server
@@ -130,7 +129,6 @@
             alsa-utils
 
 # Volume
-            playerctl
             pwvucontrol
             pulseaudio
 
@@ -139,6 +137,10 @@
 
 #notestaking
             obsidian
+
+# Office
+            onlyoffice-desktopeditors
+            libreoffice
 
             ];
 }

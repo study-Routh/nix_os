@@ -18,9 +18,7 @@ xdg.desktopEntries.yazi = {
     mimeType = [ "inode/directory" ];
   };
 
-xdg.mimeApps.defaultApplications = {
-  "inode/directory" = "yazi.desktop";
-};
+
 
   xdg.configFile."yazi/theme.toml".text = ''
        [mgr]

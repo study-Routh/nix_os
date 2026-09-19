@@ -14,7 +14,6 @@
 		./modules/gtk.nix
 		./modules/icons.nix
 		./modules/foot.nix
-		./modules/zathura.nix
 		./modules/yazi.nix
 		./modules/btop.nix
 		./modules/lazygit.nix
@@ -26,6 +25,7 @@
 		./modules/polkit.nix
 		./modules/neovim.nix	
         ./modules/aliases.nix
+        ./modules/default-apps.nix
 	];
 
 	fonts.fontconfig.enable = true;
