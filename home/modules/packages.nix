@@ -25,7 +25,6 @@
 # Language servers
             lua-language-server
             pyright
-            clang-tools
             rust-analyzer
             cmake-language-server
             jdt-language-server
@@ -37,6 +36,7 @@
             cargo
             openjdk25
             nodejs
+            uv
 
 #code formatters
             stylua
@@ -60,6 +60,7 @@
             fd
             fzf
             zoxide
+            thunar
 
 # System awareness
             btop
@@ -106,6 +107,7 @@
 
 # Browser
             brave
+           firefox
 
 # Wallpaper
             hyprpaper
@@ -121,14 +123,10 @@
 #emoji
             rofimoji
 
-#talk
-            discord
-
 #alsa-utils
             alsa-utils
 
 # Volume
-            playerctl
             pwvucontrol
             pulseaudio
 
@@ -136,6 +134,11 @@
             localsend
 
 #notestaking
-            xournalpp
+            obsidian
+
+# Office
+            onlyoffice-desktopeditors
+            libreoffice
+
             ];
 }

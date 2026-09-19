@@ -1,5 +1,5 @@
 { ... }:
 
 {
-	_module.args.theme = import ../themes/graphite.nix;
+	_module.args.theme = import ../themes/midnight.nix;
 }

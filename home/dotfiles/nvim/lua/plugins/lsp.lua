@@ -8,20 +8,23 @@ return {
 
 		vim.diagnostic.config({
 			virtual_text = false,
-			signs = true,
-			underline = true,
+			signs = false,
+			underline = false,
 			update_in_insert = false,
 			severity_sort = true,
 		})
 
 		vim.keymap.set("n", "<leader>dt", function()
 			local config = vim.diagnostic.config()
+			local enabled = not config.virtual_text
 
 			vim.diagnostic.config({
-				virtual_text = not config.virtual_text,
+				virtual_text = enabled,
+				signs = enabled,
+				underline = enabled,
 			})
 		end, {
-			desc = "Toggle Diagnostic Text",
+			desc = "Toggle Diagnostics",
 		})
 
 		--------------------------------------------------
