@@ -71,3 +71,20 @@ hl.bind("XF86AudioStop", hl.dsp.exec_cmd("playerctl stop"))
 
 --Copy Paste
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("sh -c 'cliphist list | fuzzel --dmenu | cliphist decode | wl-copy'"))
+
+-- Window movement and resizing
+
+-- Move floating windows with Super + Left Mouse
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+
+-- Resize floating windows with Super + Right Mouse
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Resize windows with Super + Arrow Keys
+hl.bind(mainMod .. " + left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+
+hl.bind(mainMod .. " + right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+
+hl.bind(mainMod .. " + up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+
+hl.bind(mainMod .. " + down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })

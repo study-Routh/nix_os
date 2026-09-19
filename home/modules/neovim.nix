@@ -30,9 +30,11 @@ let
   '';
 in
 {
-    
-    home.shellAliases = {
-    vi = "nvim";
+
+
+    home.sessionVariables = {
+        EDITOR = "nvim";
+        VISUAL = "nvim";
     };
 
   xdg.configFile."nvim" = {

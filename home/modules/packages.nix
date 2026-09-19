@@ -11,6 +11,7 @@
             foot
             less
      	    os-prober
+            efibootmgr
 
 # Neovim / development
             (lib.hiPrio gcc)
@@ -62,6 +63,7 @@
             fd
             fzf
             zoxide
+            thunar
 
 # System awareness
             btop
@@ -108,6 +110,7 @@
 
 # Browser
             brave
+           firefox
 
 # Wallpaper
             hyprpaper
@@ -123,9 +126,6 @@
 #emoji
             rofimoji
 
-#talk
-            discord
-
 #alsa-utils
             alsa-utils
 
@@ -138,7 +138,7 @@
             localsend
 
 #notestaking
-            xournalpp
+            obsidian
 
             ];
 }

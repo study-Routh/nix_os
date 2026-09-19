@@ -25,6 +25,7 @@
 		./modules/starship.nix
 		./modules/polkit.nix
 		./modules/neovim.nix	
+        ./modules/aliases.nix
 	];
 
 	fonts.fontconfig.enable = true;
