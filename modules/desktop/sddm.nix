@@ -5,7 +5,7 @@
 
   services.displayManager.sddm = {
     enable = true;
-    theme = "pixel-cyberpunk";
+    wayland.enable = true;
 
     extraPackages = [
       pkgs.kdePackages.qtmultimedia
@@ -15,17 +15,12 @@
 
   services.displayManager.defaultSession = "hyprland";
 
-  environment.systemPackages = [
-    (pkgs.stdenv.mkDerivation {
-      pname = "pixel-cyberpunk";
-      version = "unstable";
+  programs.qylock = {
+    enable = true;
 
-      src = ./../desktop/sddm-theme/pixel-cyberpunk;
+    theme = "sword";
 
-      installPhase = ''
-        mkdir -p $out/share/sddm/themes/pixel-cyberpunk
-        cp -r . $out/share/sddm/themes/pixel-cyberpunk/
-      '';
-    })
-  ];
+    sddm.enable = true;
+    quickshell.enable = false;
+  };
 }

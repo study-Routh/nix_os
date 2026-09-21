@@ -15,7 +15,7 @@
         inner-pad = 8;
 
         layer = "overlay";
-        terminal = "kitty";
+        terminal = "foot";
       };
 
       colors = {
@@ -31,7 +31,7 @@
         selection-text = "${theme.colors.foreground}ff";
         selection-match = "${theme.colors.accent}ff";
 
-        border = "${theme.colors.border}ff";
+        border = "${theme.colors.accent}99";
       };
 
       border = {

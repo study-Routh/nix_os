@@ -26,6 +26,8 @@
 		./modules/neovim.nix	
         ./modules/aliases.nix
         ./modules/default-apps.nix
+        ./modules/hyprpaper.nix
+        ./modules/fastfetch.nix
 	];
 
 	fonts.fontconfig.enable = true;

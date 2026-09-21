@@ -1,6 +1,6 @@
 hl.config({
 	misc = {
-		force_default_wallpaper = 2,
+		force_default_wallpaper = 0,
 		vrr = 0,
 	},
 })

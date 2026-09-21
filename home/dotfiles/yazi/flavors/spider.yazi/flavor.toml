@@ -1,0 +1,235 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#E51C2A", bold = true }
+
+# Find
+find_keyword  = { fg = "#FF3344", bold = true, italic = true, underline = true }
+find_position = { fg = "#E3A64A", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#65B97A", bg = "#65B97A" }
+marker_cut      = { fg = "#101214", bg = "#FF3344" }
+marker_marked   = { fg = "#F2F2F2", bg = "#E51C2A" }
+marker_selected = { fg = "#101214", bg = "#E3A64A" }
+
+# Count
+count_copied   = { fg = "#101214", bg = "#65B97A" }
+count_cut      = { fg = "#101214", bg = "#FF3344" }
+count_selected = { fg = "#101214", bg = "#E3A64A" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#3A4046" }
+
+# : }}}
+
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#F2F2F2", bg = "#E51C2A", bold = true }
+inactive = { fg = "#A7ADB3", bg = "#171A1E" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#F2F2F2", bg = "#E51C2A", bold = true }
+normal_alt  = { fg = "#A7ADB3", bg = "#20252A" }
+
+# Select mode
+select_main = { fg = "#101214", bg = "#E3A64A", bold = true }
+select_alt  = { fg = "#F2F2F2", bg = "#20252A" }
+
+# Unset mode
+unset_main = { fg = "#F2F2F2", bg = "#FF3344", bold = true }
+unset_alt  = { fg = "#F2F2F2", bg = "#20252A" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+overall = { fg = "#E51C2A" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label = { fg = "#F2F2F2", bold = true }
+progress_normal = { fg = "#65B97A", bg = "#171A1E" }
+progress_error = { fg = "#FF3344", bg = "#171A1E" }
+
+# Permissions
+perm_sep   = { fg = "#3A4046" }
+perm_type  = { fg = "#65B97A" }
+perm_read  = { fg = "#E3A64A" }
+perm_write = { fg = "#FF3344" }
+perm_exec  = { fg = "#E51C2A" }
+
+# : }}}
+
+
+# : Pick {{{
+
+[pick]
+border   = { fg = "#E51C2A" }
+active   = { fg = "#F2F2F2", bold = true }
+inactive = { fg = "#A7ADB3" }
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#E51C2A" }
+title    = { fg = "#F2F2F2" }
+value    = { fg = "#F2F2F2" }
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#3A4046" }
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#3A4046" }
+title   = { fg = "#F2F2F2" }
+hovered = { fg = "#E3A64A", underline = true }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#101214" }
+cand            = { fg = "#65B97A" }
+rest            = { fg = "#A7ADB3" }
+desc            = { fg = "#E3A64A" }
+separator       = "  "
+separator_style = { fg = "#3A4046" }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#65B97A" }
+run     = { fg = "#E3A64A" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#F2F2F2", bg = "#101214" }
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#E51C2A" }
+title    = { fg = "#E51C2A" }
+tbl_col  = { fg = "#65B97A" }
+tbl_cell = { fg = "#F2F2F2", bg = "#20252A" }
+
+# : }}}
+
+
+# : Notify {{{
+
+[notify]
+title_info  = { fg = "#65B97A" }
+title_warn  = { fg = "#E3A64A" }
+title_error = { fg = "#FF3344" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+  # Images
+  { mime = "image/*", fg = "#E3A64A" },
+
+  # Media
+  { mime = "video/*", fg = "#FF3344" },
+  { mime = "audio/*", fg = "#FF3344" },
+
+  # Archives
+  { mime = "application/zip",             fg = "#B58CFF" },
+  { mime = "application/x-tar",           fg = "#B58CFF" },
+  { mime = "application/x-bzip*",         fg = "#B58CFF" },
+  { mime = "application/x-bzip2",         fg = "#B58CFF" },
+  { mime = "application/x-7z-compressed", fg = "#B58CFF" },
+  { mime = "application/x-rar",           fg = "#B58CFF" },
+  { mime = "application/x-xz",            fg = "#B58CFF" },
+
+  # Documents
+  { mime = "application/doc",        fg = "#65B97A" },
+  { mime = "application/epub+zip",   fg = "#65B97A" },
+  { mime = "application/pdf",        fg = "#FF3344" },
+  { mime = "application/rtf",        fg = "#65B97A" },
+  { mime = "application/vnd.*",      fg = "#65B97A" },
+
+  # Special files
+  { mime = "*", is = "orphan", fg = "#F2F2F2", bg = "#5A151C" },
+  { mime = "application/*exec*", fg = "#E51C2A" },
+
+  # Fallback
+  { url = "*",  fg = "#D7DBE2" },
+  { url = "*/", fg = "#E51C2A" },
+]
+
+# : }}}
+
+
+# : Icons {{{
+
+[icon]
+
+# Clear the preset directory rules so the default blue
+# directory icons don't override our Spider color.
+dirs  = []
+files = []
+exts  = []
+globs = []
+
+conds = [
+  # Special files
+  { if = "orphan", text = "󰗇", fg = "#FF3344" },
+  { if = "link",   text = "", fg = "#65B97A" },
+  { if = "block",  text = "", fg = "#E3A64A" },
+  { if = "char",   text = "", fg = "#E3A64A" },
+  { if = "fifo",   text = "󰈲", fg = "#E3A64A" },
+  { if = "sock",   text = "󰆨", fg = "#E3A64A" },
+  { if = "dummy",  text = "󰈔", fg = "#FF3344" },
+
+  # Directories
+  { if = "dir & hovered", text = "", fg = "#FF3344" },
+  { if = "dir",           text = "", fg = "#E51C2A" },
+
+  # Executables
+  { if = "exec", text = "", fg = "#E3A64A" },
+
+  # Normal files
+  { if = "!dir", text = "󰈔", fg = "#D7DBE2" },
+]
+
+# : }}}

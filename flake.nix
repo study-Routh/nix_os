@@ -1,33 +1,36 @@
 {
-	description = "My nixos config after many pinkscreens of death";
+  description = "My nixos config after many pinkscreens of death";
 
-	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-		home-manager = {
-			url = "github:nix-community/home-manager/";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-	};
+    home-manager = {
+      url = "github:nix-community/home-manager/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-	outputs = { self, nixpkgs, home-manager, ... }:
-	{ 	
-		nixosConfigurations.routh = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
+    qylock.url = "github:Darkkal44/qylock";
+  };
 
-			modules = [
-				./configuration.nix
-				
-				home-manager.nixosModules.home-manager
-					{
-                        home-manager.useGlobalPkgs = true;
+  outputs = { self, nixpkgs, home-manager, qylock, ... }:
+    {
+      nixosConfigurations.routh = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-                        home-manager.useUserPackages = true;
+        modules = [
+          ./configuration.nix
 
-                        home-manager.users.routh = import ./home/routh.nix;
-					}
-			
-			];
-		};
-	};
+          qylock.nixosModules.default
+
+          home-manager.nixosModules.home-manager
+
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.routh = import ./home/routh.nix;
+          }
+        ];
+      };
+    };
 }

@@ -1,5 +1,6 @@
 { ... }:
 
 {
-	_module.args.theme = import ../themes/midnight.nix;
+	_module.args.theme = import ../themes/spider.nix;
 }
+
