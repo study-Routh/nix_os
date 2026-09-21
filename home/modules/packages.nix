@@ -14,9 +14,9 @@
             efibootmgr
 
 # Neovim / development
-            (lib.hiPrio gcc)
-            clang
-            clang-tools
+            (lib.hiPrio gcc16)
+            llvmPackages_23.clang
+            llvmPackages_23.clang-tools
             gnumake
             cmake
             tree-sitter
@@ -37,7 +37,7 @@
             rustc
             cargo
             openjdk25
-            nodejs
+            nodejs_26
             uv
 
 #code formatters
