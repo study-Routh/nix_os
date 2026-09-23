@@ -12,6 +12,7 @@
             less
      	    os-prober
             efibootmgr
+            file
 
 # Neovim / development
             (lib.hiPrio gcc16)
@@ -141,6 +142,12 @@
 # Office
             onlyoffice-desktopeditors
             libreoffice
+
+#Discord
+            discord
+
+#to write on screen
+            wayscriber
 
             ];
 }

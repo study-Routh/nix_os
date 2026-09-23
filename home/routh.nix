@@ -28,6 +28,7 @@
         ./modules/default-apps.nix
         ./modules/hyprpaper.nix
         ./modules/fastfetch.nix
+        ./modules/wayscribe.nix
 	];
 
 	fonts.fontconfig.enable = true;

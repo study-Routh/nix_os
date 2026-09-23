@@ -119,7 +119,12 @@ vim.keymap.set("n", "<F5>", function()
 		local exe = "/tmp/nvim-" .. name
 
 		run_in_terminal(
-			"gcc " .. vim.fn.shellescape(file) .. " -o " .. vim.fn.shellescape(exe) .. " && " .. vim.fn.shellescape(exe),
+			"gcc -std=c23 "
+				.. vim.fn.shellescape(file)
+				.. " -o "
+				.. vim.fn.shellescape(exe)
+				.. " && "
+				.. vim.fn.shellescape(exe),
 			dir
 		)
 
@@ -130,10 +135,22 @@ vim.keymap.set("n", "<F5>", function()
 		local exe = "/tmp/nvim-" .. name
 
 		run_in_terminal(
-			"g++ " .. vim.fn.shellescape(file) .. " -o " .. vim.fn.shellescape(exe) .. " && " .. vim.fn.shellescape(exe),
+			"if [ ! -f gcm.cache/std.gcm ]; then "
+				.. "g++ -std=c++23 -fmodules --compile-std-module "
+				.. vim.fn.shellescape(file)
+				.. " -o "
+				.. vim.fn.shellescape(exe)
+				.. "; "
+				.. "else "
+				.. "g++ -std=c++23 -fmodules "
+				.. vim.fn.shellescape(file)
+				.. " -o "
+				.. vim.fn.shellescape(exe)
+				.. "; "
+				.. "fi && "
+				.. vim.fn.shellescape(exe),
 			dir
 		)
-
 	--------------------------------------------------
 	-- Rust
 	--------------------------------------------------
@@ -158,11 +175,13 @@ vim.keymap.set("n", "<F5>", function()
 	--------------------------------------------------
 	elseif ft == "java" then
 		run_in_terminal("javac " .. vim.fn.shellescape(file) .. " && java " .. vim.fn.shellescape(name), dir)
+
 	--------------------------------------------------
 	-- JavaScript
 	--------------------------------------------------
 	elseif ft == "javascript" then
 		run_in_terminal("node " .. vim.fn.shellescape(file), dir)
+
 	--------------------------------------------------
 	-- Unsupported
 	--------------------------------------------------

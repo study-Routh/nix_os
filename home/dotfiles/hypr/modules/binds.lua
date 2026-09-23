@@ -88,3 +88,8 @@ hl.bind(mainMod .. " + right", hl.dsp.window.resize({ x = 10, y = 0, relative = 
 hl.bind(mainMod .. " + up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
 
 hl.bind(mainMod .. " + down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+
+-- Wayscriber
+hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("wayscriber --daemon-toggle"))
+hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("wayscriber --light-toggle"))
+hl.bind(mainMod .. " + ALT + F", hl.dsp.exec_cmd("wayscriber --light-draw-toggle"))

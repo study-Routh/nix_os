@@ -8,19 +8,15 @@
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    qylock.url = "github:Darkkal44/qylock";
   };
 
-  outputs = { self, nixpkgs, home-manager, qylock, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }:
     {
       nixosConfigurations.routh = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
           ./configuration.nix
-
-          qylock.nixosModules.default
 
           home-manager.nixosModules.home-manager
 
