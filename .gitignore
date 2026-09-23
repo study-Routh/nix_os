@@ -1,0 +1,37 @@
+# Nix build results
+/result
+/result-*
+
+# Nix development environment
+/.direnv/
+/.nix-defexpr/
+/.nix-profile
+
+# Editor temporary files
+*.swp
+*.swo
+*.tmp
+*~
+
+# Logs / backups / cache
+*.log
+*.bak
+*.backup
+*.cache
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Local wallpapers
+/wallpapers/
+
+# Secrets
+.env
+.env.*
+*.secret
+*.key
+*.pem
