@@ -26,9 +26,6 @@
 # OS files
 .DS_Store
 
-# Local wallpapers
-/wallpapers/
-
 # Secrets
 .env
 .env.*
