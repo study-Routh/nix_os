@@ -149,5 +149,14 @@
 #to write on screen
             wayscriber
 
+#voice editor
+        audacity
+        
+#music visual in terminal
+        cava
+
+#productivity
+        super-productivity
+
             ];
 }

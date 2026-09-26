@@ -70,23 +70,10 @@
           "outputColor": "#F2F2F2"
         },
 
-        {
-          "type": "host",
-          "key": "Host",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
 
         {
           "type": "kernel",
           "key": "Kernel",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
-          "type": "uptime",
-          "key": "Uptime",
           "keyColor": "#E51C2A",
           "outputColor": "#F2F2F2"
         },
@@ -106,36 +93,8 @@
         },
 
         {
-          "type": "display",
-          "key": "Display",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
           "type": "wm",
           "key": "Window Manager",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
-          "type": "theme",
-          "key": "Theme",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
-          "type": "icons",
-          "key": "Icons",
-          "keyColor": "#E51C2A",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
-          "type": "cursor",
-          "key": "Cursor",
           "keyColor": "#E51C2A",
           "outputColor": "#F2F2F2"
         },
@@ -171,36 +130,15 @@
         },
 
         {
-          "type": "gpu",
-          "key": "GPU",
-          "keyColor": "#FF3344",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
           "type": "memory",
           "key": "Memory",
           "keyColor": "#FF3344",
           "outputColor": "#F2F2F2"
         },
 
-        {
-          "type": "swap",
-          "key": "Swap",
-          "keyColor": "#FF3344",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
+             {
           "type": "disk",
           "key": "Disk",
-          "keyColor": "#FF3344",
-          "outputColor": "#F2F2F2"
-        },
-
-        {
-          "type": "localip",
-          "key": "Local IP",
           "keyColor": "#FF3344",
           "outputColor": "#F2F2F2"
         },
