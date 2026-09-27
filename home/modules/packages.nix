@@ -140,5 +140,8 @@
             onlyoffice-desktopeditors
             libreoffice
 
+#Quickshell
+            quickshell
+
             ];
 }

@@ -14,6 +14,8 @@
       ./modules/gtk.nix
       ./modules/fonts.nix
       ./modules/hardware_tweaks/opentabletdriver.nix
+      ./modules/virtualization.nix
+      ./modules/mounts.nix
     ];
 
 #timezone
