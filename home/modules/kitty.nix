@@ -15,6 +15,10 @@
 
         settings = {
             shell = "zsh";
+
+            start_as = "normal";
+            remember_window_size = false;
+
             scrollback_lines = 500;
 
             enable_audio_bell = false;
@@ -29,7 +33,7 @@
 
             background = "#${theme.colors.background}";
             foreground = "#${theme.colors.foreground}";
-	    background_opacity = "0.92";
+            background_opacity = "0.92";
 
             selection_background = "#${theme.colors.surfaceAlt}";
             selection_foreground = "#${theme.colors.foreground}";

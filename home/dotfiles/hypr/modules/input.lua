@@ -8,5 +8,6 @@ hl.config({
 
 hl.device({
 	name = "opentabletdriver-virtual-artist-tablet",
-	output = "HDMI-A-1",
+	output = "eDP-1",
+	--output = "HDMI-A-1",
 })

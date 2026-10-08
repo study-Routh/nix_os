@@ -5,9 +5,7 @@
     enable = true;
 
     settings = {
-      splash = true;
-      splash_opacity = 0.8;
-
+      
       wallpaper = [
         {
           monitor = "*";

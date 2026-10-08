@@ -13,6 +13,7 @@
      	    os-prober
             efibootmgr
             file
+            hyprsunset
 
 # Neovim / development
             (lib.hiPrio gcc16)
